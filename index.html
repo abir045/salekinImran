@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Blog</title>
+    </head>
+    
+    <style>
+     h1{ font-family:Lucida Sans;
+         background-color:rgb(206, 224, 220);
+     }
+     h3{ font-style:italic;
+         font-family: ;
+         background-color:gray;
+     }
+     h2{ font-style:italic;} 
+     
+     h4 {font-style:italic;}
+     h5 { font-style: italic;
+          font-weight:bold;
+          background-color:white;
+          font-size:16px; 
+      }
+     #norge{
+              font-style: italic;
+          font-weight:bold;
+          background-color:white;
+              font-size: 16px;
+     }
+
+     body{
+        background-color:Silver;
+        font-family: Lucida Sans;
+     } 
+
+     .readmode{ background-color: rgb(253, 255, 235); }
+
+     /* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  left: 30px;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+ * {
+  box-sizing: border-box;
+}
+        
+ 
+
+
+        
+    </style>
+    <body>
+        
+        <h1>Salekin's blog</h1>
+
+        <h3>Contents</h3>
+        <ul>
+            <li><em>Journey of a 10000 miles</em></li>
+            <li><em>Random thoughts</em></li>
+            <li><em>Beautiful people</em></li>
+            <li><em>Special moments</em></li>
+        </ul>
+        
+        <h2>First post</h2>
+        <h6>Posted on 15 jan 2019</h6>
+        
+        <p>Started leaning web developement</p>
+
+        <h4> 22nd August 2014 </h4>
+        <P id="norge">Welcome to Norway!<P>
+        
+        <div class="row">
+        <div class="column">    
+        <img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/10455678_10152663843714323_4001301764058027244_n.jpg?_nc_cat=108&_nc_ht=scontent-arn2-2.xx&oh=a1842721d0b4885bdda435490e5d4446&oe=5D247A54"width="400" height="400" onclick="myFunction(this);">
+        </div>
+
+        <div class="column">
+        
+        <img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/14051773_10154414985854323_2913810402519200903_n.jpg?_nc_cat=106&_nc_ht=scontent-arn2-2.xx&oh=56a0e4a28b5313d800822015406bb1ce&oe=5CE81F85"width="400" onclick="myFunction(this);" >
+
+        </div>
+        
+         <div class="column">
+        <img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/10426269_10153176099744323_4485110845605858697_n.jpg?_nc_cat=111&_nc_ht=scontent-arn2-2.xx&oh=bf82b0e312e9df22a35b496c3e2dc54e&oe=5D24FD9C" width="500" height="400" onclick="myFunction(this);">
+        </div>
+
+        </div>
+
+        <!-- The expanding image container -->
+        <div class="container">
+  <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+        <img id="expandedImg" style="width:90%">
+
+  <!-- Image text -->
+        <div id="imgtext"></div>
+        </div>
+        <script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+        <div>
+
+        <p class="readmode"> My first day at university of Agder was not the actual first day of the semester, but however it was the first day for me. I have missed the study start festival, as i reached a bit later at the campus.Well this was just the begining. New country, new place, new people, new language,it was time to embrace the new.</p>
+        </div>    
+
+        <h5> Studying at University of Agder, grimstad</h5>
+
+        <p class="readmode"> So now after the first semester, I have made some friends and started to enjoy the study and dorm life!!. That selfie in the middle was from my birthday party.</p>
+
+        <div class="row">
+        <div class="column">  
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/10156079_10152800257899323_7118581999196948036_n.jpg?_nc_cat=103&_nc_ht=scontent.fcph1-1.fna&oh=d7e882d73ce4e11cb70ec0df0de70904&oe=5CDB8B30" width="400" onclick="myFunction(this);">
+    </div>
+        <div class="column">
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/1654119_10152790676444323_9212438433025580069_n.jpg?_nc_cat=100&_nc_ht=scontent.fcph1-1.fna&oh=be7c206a0e270c4bf1fc0833368ad1a1&oe=5D20DB99" width="400"
+         onclick="myFunction(this);">
+     </div>
+       <div class="column">
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/1798681_1599039956985728_4377748974721493493_n.jpg?_nc_cat=105&_nc_ht=scontent.fcph1-1.fna&oh=d70bae9becbf5c25263541dc40a51f31&oe=5D220D95" width="400" height="300" onclick="myFunction(this);">
+    </div>
+
+        </div> 
+          <h5>My first euro trip in first christmas </h5>
+        
+        <p class="readmode"> At my first chrismas in Grimstad, as I knew university is going to be closed and everybody going to go home. So i planned a 3 weeks long huge trip with my friends. I went to berlin, aachen in germany, amsterdam in Netherlands and Brussels in Belgium.</p>
+        
+        <div class="row">
+        <div class ="column">
+
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/10411742_10205766072539375_3697625307099865604_n.jpg?_nc_cat=109&_nc_ht=scontent.fcph1-1.fna&oh=114a44fcd68e7462e097ab5d84848871&oe=5D1F6C7F" width="400"  onclick="myFunction(this);">
+
+      </div>
+         
+
+        <div class="column">
+
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/10897756_10152923664674323_5956520376974212339_n.jpg?_nc_cat=105&_nc_ht=scontent.fcph1-1.fna&oh=82f16f41ac6ecc22b660c9b64f299325&oe=5CF26EED" width="400" onclick="myFunction(this);">
+        </div>
+
+        <div class="column">
+        
+        <img src="https://scontent.fcph1-1.fna.fbcdn.net/v/t1.0-9/10394646_10152923695419323_1785663519851401733_n.jpg?_nc_cat=105&_nc_ht=scontent.fcph1-1.fna&oh=1ba62a4bf1d9a369e9ca1cad7527b9f1&oe=5D2003DE" width="400" onclick="myFunction(this);">
+
+      </div>
+      </div>
+
+      
+
+      
+
+
+        <h5>Studying and exploring in Grimstad</h5>
+
+        <p class="readmode"> Grimstad was a beautiful small city in the south of Norway, with loads of natural beauty. it was full of sea and nature. As it was coastal city, you could see the ocean any time from home.But then it was a city of peace & quiet. They have a saying that , that southern part of Norway is the sunniest part of Norway!!.
+        It was a tough city to live in if you are coming from a place of buzz & crowd like Dhaka. The city has more or less 20000 people, of which half are students. The city had a very small town center with a few shops, few grocery shops, maybe three pubs and that is it. But the view of the city can amaze you instantly. It was a proper place to study with no distractions and peace & quiet. Some of the photos i have taken from groos beach & other places. 
+        </p>    
+        
+    </body>
+</html>
